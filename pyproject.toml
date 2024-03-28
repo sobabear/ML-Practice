@@ -1,0 +1,83 @@
+[tool.poetry]
+name = "mnist_tutorial"
+version = "0.1.0"
+description = ""
+
+authors = [
+    "Juhyung Park <jack0878@snu.ac.kr>"
+    ]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python =  "^3.11.7"
+numpy = "^1.26.1"
+torch = "^2.1.1"
+torchvision = "^0.16.2"
+matplotlib = "^3.8.3"
+
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^3.6.3"
+ipykernel = "^6.23.0"
+black = { extras = ["d"], version = "^23.1.0" }
+boto3-stubs = { extras = ["essential"], version = "^1.24.44" }
+isort = "^5.10.1"
+line-profiler = "^4.0.2"
+memory-profiler = "^0.61.0"
+rope = "^1.7.0"
+autopep8 = "^2.0.2"
+types-pyyaml = "^6.0.12.9"
+types-requests = "^2.31.0.1"
+mypy = "^1.4.0"
+
+[tool.ruff]
+line-length = 100
+target-version = 'py39'
+# Enable Pyflakes `E` and `F` codes by default.
+select = ["E", "F", "W", "N", "B", "I", "NPY", "PL", "C90", "UP", "SIM", "RUF"]
+
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 12
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.mypy]
+# be strict
+disallow_untyped_calls = true
+warn_return_any = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+# The following are off by default.  Flip them on if you feel
+# adventurous.
+# disallow_untyped_defs = true
+check_untyped_defs = true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+disable = [
+    "E0401",
+    "E1101",
+    "E0611",
+    "E0402",
+    "E1130",
+    "W0105",
+    "W0104",
+    "C0116",
+    "C0115",
+    "C0114",
+    "W0718",
+    "UP035",
+    "UP006",
+    "PLR0911",
+]

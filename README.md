@@ -1,4 +1,7 @@
 ```bash
+brew install poetry
+poetry --version
+
 poetry shell
 
 poetry config virtualenvs.in-project true

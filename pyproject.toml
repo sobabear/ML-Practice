@@ -2,6 +2,7 @@
 name = "mnist_tutorial"
 version = "0.1.0"
 description = ""
+package-mode = false
 
 authors = [
     "Yongjun Lee <stareta1202@korea.ac.kr>"
@@ -9,10 +10,8 @@ authors = [
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python =  "^3.11.7"
+python =  "^3.13"
 numpy = "^1.26.1"
-torch = "^2.2.2"
-torchvision = "^0.17"
 matplotlib = "^3.8.3"
 
 [tool.poetry.group.dev.dependencies]
